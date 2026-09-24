@@ -90,9 +90,9 @@ function Index() {
         <img
           src="/dastan-principal.jpg"
           alt="Mesa elegante com pratos do restaurante"
-          className="absolute inset-0 h-full w-full object-cover opacity-45"
+          className="absolute inset-0 h-full w-full object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#160f0b] via-[#160f0b]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#160f0b]/65 via-[#160f0b]/30 to-transparent" />
         <div className="relative mx-auto w-full max-w-7xl px-5 py-24 lg:px-8">
           <div className="max-w-2xl text-white">
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.3em] text-[#d6a85d]">Sabores que ficam na memória</p>
