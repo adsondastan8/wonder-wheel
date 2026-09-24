@@ -88,7 +88,7 @@ function Index() {
 
       <section id="inicio" className="relative flex min-h-[720px] items-center overflow-hidden bg-[#1e1713] pt-24">
         <img
-          src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1800&q=90"
+          src="/dastan-principal.jpg"
           alt="Mesa elegante com pratos do restaurante"
           className="absolute inset-0 h-full w-full object-cover opacity-45"
         />
