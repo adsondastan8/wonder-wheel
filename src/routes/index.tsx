@@ -116,25 +116,36 @@ function Index() {
         </div>
       </section>
 
-      <section id="video" className="bg-[#eef3f8] px-5 py-20 lg:py-24">
+      <section id="video" className="scroll-mt-24 bg-[#eef3f8] px-5 py-20 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#a87932]">Conheça o Dastan</p>
-            <h2 className="mt-3 font-serif text-4xl font-bold text-[#0d2747] sm:text-5xl">Veja o nosso vídeo</h2>
-            <p className="mt-4 text-[#66564d]">Assista ao vídeo e conheça um pouco mais sobre o nosso restaurante.</p>
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#a87932]">VÍDEO DO DASTAN</p>
+            <h2 className="mt-3 font-serif text-4xl font-bold text-[#0d2747] sm:text-5xl">Assista ao nosso vídeo</h2>
+            <p className="mt-4 text-[#66564d]">Conheça o Dastan Restaurante através deste vídeo.</p>
           </div>
+
           <div className="mt-10 overflow-hidden rounded-3xl bg-[#07162a] shadow-2xl ring-1 ring-[#0d2747]/10">
             <div className="aspect-video w-full">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube-nocookie.com/embed/ejXePsqlgNo?rel=0"
+                src="https://www.youtube.com/embed/ejXePsqlgNo?rel=0"
                 title="Vídeo do Dastan Restaurante"
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
+                loading="eager"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
+          </div>
+
+          <div className="mt-6 text-center">
+            <a
+              href="https://youtu.be/ejXePsqlgNo"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-[#0d2747] px-7 py-3.5 font-bold text-white transition hover:bg-[#163a63]"
+            >
+              ▶ Assistir no YouTube
+            </a>
           </div>
         </div>
       </section>
