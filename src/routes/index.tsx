@@ -63,6 +63,7 @@ function Index() {
           <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
             <a href="#inicio" className="transition hover:text-[#d6a85d]">Início</a>
             <a href="#sobre" className="transition hover:text-[#d6a85d]">Sobre nós</a>
+            <a href="#video" className="transition hover:text-[#d6a85d]">Vídeo</a>
             <a href="#menu" className="transition hover:text-[#d6a85d]">Menu</a>
             <a href="#contactos" className="transition hover:text-[#d6a85d]">Contactos</a>
           </nav>
@@ -78,6 +79,7 @@ function Index() {
             <div className="flex flex-col gap-4 text-sm">
               <a href="#inicio" onClick={() => setMenuOpen(false)}>Início</a>
               <a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre nós</a>
+              <a href="#video" onClick={() => setMenuOpen(false)}>Vídeo</a>
               <a href="#menu" onClick={() => setMenuOpen(false)}>Menu</a>
               <a href="#contactos" onClick={() => setMenuOpen(false)}>Contactos</a>
               <a href="#reservas" onClick={() => setMenuOpen(false)} className="font-semibold text-[#d6a85d]">Reservar mesa</a>
@@ -109,6 +111,27 @@ function Index() {
               <a href="#reservas" className="rounded-full border border-white/30 px-6 py-3.5 font-semibold transition hover:bg-white/10">
                 Reservar mesa
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" className="bg-[#eef3f8] px-5 py-20 lg:py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#a87932]">Conheça o Dastan</p>
+            <h2 className="mt-3 font-serif text-4xl font-bold text-[#0d2747] sm:text-5xl">Veja o nosso vídeo</h2>
+            <p className="mt-4 text-[#66564d]">Assista ao vídeo e conheça um pouco mais sobre o nosso restaurante.</p>
+          </div>
+          <div className="mt-10 overflow-hidden rounded-3xl bg-[#07162a] shadow-2xl ring-1 ring-[#0d2747]/10">
+            <div className="aspect-video w-full">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/ejXePsqlgNo"
+                title="Vídeo do Dastan Restaurante"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
@@ -202,7 +225,7 @@ function Index() {
               <label className="text-sm font-semibold">Nome<input required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" name="name" placeholder="O seu nome" /></label>
               <label className="text-sm font-semibold">Telefone<input required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" name="phone" type="tel" placeholder="+258 ..." /></label>
               <label className="text-sm font-semibold">Data<input name="date" type="date" required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" /></label>
-              <label className="text-sm font-semibold">Pessoas<select name="people" className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]"><option>2 pessoas</option><option>3 pessoas</option><option>4 pessoas</option><option>5+ pessoas</option></select></label>
+              <label className="text-sm font-semibold">Pessoas<select name="people" className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]"><option>2 pessoas</option><option>3 pessoas</option><option>4 pessoas</option><option>5+ pessoas</select></label>
             </div>
             <button
               type="submit"
