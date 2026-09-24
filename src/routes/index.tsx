@@ -13,7 +13,7 @@ const dishes = [
   {
     name: "Frango Grelhado à Dastan",
     description: "Frango grelhado, arroz aromático, legumes salteados e molho da casa.",
-    price: "650 MT",
+    price: "1999 MT",
     image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=900&q=85",
   },
   {
