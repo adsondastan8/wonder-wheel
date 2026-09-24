@@ -127,8 +127,10 @@ function Index() {
             <div className="aspect-video w-full">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/ejXePsqlgNo"
+                src="https://www.youtube-nocookie.com/embed/ejXePsqlgNo?rel=0"
                 title="Vídeo do Dastan Restaurante"
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
