@@ -6,6 +6,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const WHATSAPP_NUMBER = "258864311529";
+const whatsappLink = (message: string) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
 const dishes = [
   {
     name: "Frango Grelhado à Dastan",
@@ -142,6 +145,14 @@ function Index() {
                     <span className="shrink-0 font-bold text-[#d6a85d]">{dish.price}</span>
                   </div>
                   <p className="mt-3 text-sm leading-6 text-white/60">{dish.description}</p>
+                  <a
+                    href={whatsappLink(`Olá! Gostaria de pedir o prato: ${dish.name} — ${dish.price}.`)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-3 text-sm font-bold text-white transition hover:brightness-95"
+                  >
+                    Pedir pelo WhatsApp
+                  </a>
                 </div>
               </article>
             ))}
@@ -161,7 +172,7 @@ function Index() {
             <h2 className="mt-3 font-serif text-4xl font-bold">A sua mesa está à sua espera.</h2>
             <p className="mt-5 leading-7 text-[#5e411f]">Entre em contacto connosco para reservar uma mesa e preparar uma experiência especial.</p>
             <div className="mt-8 space-y-4 text-sm font-semibold">
-              <div className="flex items-center gap-3"><Phone size={19} /> +258 84 000 0000</div>
+              <div className="flex items-center gap-3"><Phone size={19} /> +258 86 431 1529</div>
               <div className="flex items-center gap-3"><Clock3 size={19} /> Terça — Domingo · 10:00 — 22:00</div>
               <div className="flex items-center gap-3"><MapPin size={19} /> Maputo, Moçambique</div>
             </div>
@@ -173,7 +184,20 @@ function Index() {
               <label className="text-sm font-semibold">Data<input type="date" required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" /></label>
               <label className="text-sm font-semibold">Pessoas<select className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]"><option>2 pessoas</option><option>3 pessoas</option><option>4 pessoas</option><option>5+ pessoas</option></select></label>
             </div>
-            <button type="submit" className="mt-6 w-full rounded-xl bg-[#241a15] px-6 py-3.5 font-bold text-white transition hover:bg-[#38271f]">Solicitar reserva</button>
+            <button
+              type="submit"
+              className="mt-6 w-full rounded-xl bg-[#241a15] px-6 py-3.5 font-bold text-white transition hover:bg-[#38271f]"
+            >
+              Solicitar reserva
+            </button>
+            <a
+              href={whatsappLink("Olá! Gostaria de fazer uma reserva no Dastan Restaurante.")}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 flex w-full items-center justify-center rounded-xl bg-[#25D366] px-6 py-3.5 font-bold text-white transition hover:brightness-95"
+            >
+              Reservar pelo WhatsApp
+            </a>
           </form>
         </div>
       </section>
@@ -193,7 +217,14 @@ function Index() {
           </div>
           <div>
             <p className="font-bold">Siga-nos</p>
-            <a href="#" className="mt-4 inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#d6a85d]"><Instagram size={18} /> Instagram</a>
+            <a
+              href={whatsappLink("Olá! Gostaria de falar com o Dastan Restaurante.")}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#d6a85d]"
+            >
+              WhatsApp: +258 86 431 1529
+            </a>
           </div>
         </div>
         <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs text-white/40">© {new Date().getFullYear()} Dastan Restaurante. Todos os direitos reservados.</div>
