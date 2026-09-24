@@ -33,6 +33,26 @@ const dishes = [
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleReservation = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const date = String(formData.get("date") || "").trim();
+    const people = String(formData.get("people") || "").trim();
+
+    const message = [
+      "Olá! Gostaria de solicitar uma reserva no Dastan Restaurante.",
+      "",
+      "👤 Nome: " + name,
+      "📞 Telefone: " + phone,
+      "📅 Data: " + date,
+      "👥 Pessoas: " + people,
+    ].join("\n");
+
+    window.open(whatsappLink(message), "_blank", "noopener,noreferrer");
+  };
+
   return (
     <main className="min-h-screen bg-[#fbf7ef] text-[#251b16]">
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#1e1713]/95 text-white backdrop-blur-md">
@@ -177,12 +197,12 @@ function Index() {
               <div className="flex items-center gap-3"><MapPin size={19} /> Maputo, Moçambique</div>
             </div>
           </div>
-          <form className="bg-white p-8 sm:p-12" onSubmit={(e) => e.preventDefault()}>
+          <form className="bg-white p-8 sm:p-12" onSubmit={handleReservation}>
             <div className="grid gap-5 sm:grid-cols-2">
-              <label className="text-sm font-semibold">Nome<input required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" placeholder="O seu nome" /></label>
-              <label className="text-sm font-semibold">Telefone<input required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" placeholder="+258 ..." /></label>
-              <label className="text-sm font-semibold">Data<input type="date" required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" /></label>
-              <label className="text-sm font-semibold">Pessoas<select className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]"><option>2 pessoas</option><option>3 pessoas</option><option>4 pessoas</option><option>5+ pessoas</option></select></label>
+              <label className="text-sm font-semibold">Nome<input required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" name="name" placeholder="O seu nome" /></label>
+              <label className="text-sm font-semibold">Telefone<input required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" name="phone" type="tel" placeholder="+258 ..." /></label>
+              <label className="text-sm font-semibold">Data<input name="date" type="date" required className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]" /></label>
+              <label className="text-sm font-semibold">Pessoas<select name="people" className="mt-2 w-full rounded-xl border border-[#e2d8ca] bg-[#fbf7ef] px-4 py-3 outline-none focus:border-[#b78332]"><option>2 pessoas</option><option>3 pessoas</option><option>4 pessoas</option><option>5+ pessoas</option></select></label>
             </div>
             <button
               type="submit"
@@ -211,7 +231,7 @@ function Index() {
           <div>
             <p className="font-bold">Contactos</p>
             <div className="mt-4 space-y-3 text-sm text-white/60">
-              <p className="flex items-center gap-2"><Phone size={16} /> +258 84 000 0000</p>
+              <p className="flex items-center gap-2"><Phone size={16} /> +258 86 431 1529</p>
               <p className="flex items-center gap-2"><MapPin size={16} /> Maputo, Moçambique</p>
             </div>
           </div>
