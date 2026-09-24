@@ -55,7 +55,7 @@ function Index() {
 
   return (
     <main className="min-h-screen bg-[#fbf7ef] text-[#251b16]">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#1e1713]/95 text-white backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b1f3a]/95 text-white backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a href="#inicio" className="font-serif text-2xl font-bold tracking-wide">
             Dastan <span className="text-[#d6a85d]">Restaurante</span>
@@ -66,7 +66,7 @@ function Index() {
             <a href="#menu" className="transition hover:text-[#d6a85d]">Menu</a>
             <a href="#contactos" className="transition hover:text-[#d6a85d]">Contactos</a>
           </nav>
-          <a href="#reservas" className="hidden rounded-full bg-[#d6a85d] px-5 py-2.5 text-sm font-bold text-[#241810] transition hover:bg-[#edc77e] md:block">
+          <a href="#reservas" className="hidden rounded-full bg-[#d6a85d] px-5 py-2.5 text-sm font-bold text-[#07162a] transition hover:bg-[#edc77e] md:block">
             Reservar mesa
           </a>
           <button aria-label="Abrir menu" className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
@@ -86,13 +86,13 @@ function Index() {
         )}
       </header>
 
-      <section id="inicio" className="relative flex min-h-[720px] items-center overflow-hidden bg-[#1e1713] pt-24">
+      <section id="inicio" className="relative flex min-h-[720px] items-center overflow-hidden bg-[#0b1f3a] pt-24">
         <img
           src="/dastan-principal.jpg"
           alt="Mesa elegante com pratos do restaurante"
           className="absolute inset-0 h-full w-full object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#160f0b]/65 via-[#160f0b]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#07162a]/65 via-[#07162a]/30 to-transparent" />
         <div className="relative mx-auto w-full max-w-7xl px-5 py-24 lg:px-8">
           <div className="max-w-2xl text-white">
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.3em] text-[#d6a85d]">Sabores que ficam na memória</p>
@@ -103,7 +103,7 @@ function Index() {
               Uma experiência gastronómica acolhedora, com ingredientes frescos, pratos cheios de sabor e o cuidado que transforma uma refeição em memória.
             </p>
             <div className="mt-9 flex flex-wrap gap-4">
-              <a href="#menu" className="inline-flex items-center gap-2 rounded-full bg-[#d6a85d] px-6 py-3.5 font-bold text-[#241810] transition hover:bg-[#edc77e]">
+              <a href="#menu" className="inline-flex items-center gap-2 rounded-full bg-[#d6a85d] px-6 py-3.5 font-bold text-[#07162a] transition hover:bg-[#edc77e]">
                 Ver o nosso menu <ArrowRight size={18} />
               </a>
               <a href="#reservas" className="rounded-full border border-white/30 px-6 py-3.5 font-semibold transition hover:bg-white/10">
@@ -148,7 +148,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="menu" className="bg-[#241a15] px-5 py-20 text-white lg:py-28">
+      <section id="menu" className="bg-[#0d2747] px-5 py-20 text-white lg:py-28">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#d6a85d]">O nosso menu</p>
@@ -178,7 +178,7 @@ function Index() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <a href="#reservas" className="inline-flex items-center gap-2 rounded-full border border-[#d6a85d]/50 px-6 py-3 font-semibold text-[#d6a85d] transition hover:bg-[#d6a85d] hover:text-[#241810]">
+            <a href="#reservas" className="inline-flex items-center gap-2 rounded-full border border-[#d6a85d]/50 px-6 py-3 font-semibold text-[#d6a85d] transition hover:bg-[#d6a85d] hover:text-[#07162a]">
               <UtensilsCrossed size={18} /> Fazer uma reserva
             </a>
           </div>
@@ -206,7 +206,7 @@ function Index() {
             </div>
             <button
               type="submit"
-              className="mt-6 w-full rounded-xl bg-[#241a15] px-6 py-3.5 font-bold text-white transition hover:bg-[#38271f]"
+              className="mt-6 w-full rounded-xl bg-[#0d2747] px-6 py-3.5 font-bold text-white transition hover:bg-[#163a63]"
             >
               Solicitar reserva
             </button>
@@ -222,7 +222,7 @@ function Index() {
         </div>
       </section>
 
-      <footer id="contactos" className="bg-[#17110e] px-5 py-12 text-white lg:px-8">
+      <footer id="contactos" className="bg-[#07162a] px-5 py-12 text-white lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
           <div>
             <p className="font-serif text-2xl font-bold">Dastan Restaurante</p>
